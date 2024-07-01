@@ -1,0 +1,17 @@
+<style>
+  .container {
+    background-color: yellow;
+    text-align: center;
+  }
+
+  .h1 {
+    text-align: center;
+    color: white;
+  }
+</style>
+<div class="container">
+  <h1>Notes</h1>
+  <ul>
+    <li *ngFor="let item of items">{{item.description}}</li>
+  </ul>
+</div>

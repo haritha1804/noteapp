@@ -3,11 +3,12 @@ import { NotecreateComponent } from './notecreate/notecreate.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { AppComponent } from './app.component';
 import { NoteeditComponent } from './noteedit/noteedit.component';
 import { NotedetailsComponent } from './notedetails/notedetails.component';
+import { HomeComponent } from './home/home.component';
 
 export const routes: Routes = [
+    {path:"",component:HomeComponent},
     {path:"add",component:NotecreateComponent},
     {path:"edit",component:NoteeditComponent},
     {path:"details",component:NotedetailsComponent}

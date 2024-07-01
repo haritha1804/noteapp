@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
+import { Console } from 'console';
 
 @Component({
   standalone:true,
@@ -11,7 +12,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 
 export class NotecreateComponent {
-  filter: "all" | "active" | "done" = "all";
+  // filter: "all" | "active" | "done" = "all";
 
   allItems = [
     { description: "eat", done: true },
@@ -20,21 +21,15 @@ export class NotecreateComponent {
     { description: "laugh", done: false },
   ];
 
-  get items() {
-    if (this.filter === "all") {
-      return this.allItems;
-    }
-    return this.allItems.filter((item) =>
-      this.filter === "done" ? item.done : !item.done
-    );
-  }
   addItem(description: string) {
     if (!description) return;
-  
+
     this.allItems.unshift({
       description,
       done: false
     });
+
+  console.log(this.allItems)
   }
   // constructor(private router: Router) { }
 
