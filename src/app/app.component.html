@@ -1,0 +1,24 @@
+<style>
+  .container{
+    background-color: yellow;
+    text-align: center;
+  }
+  .h1{
+    text-align: center;
+    color: white;
+  }
+</style>
+<div class="container">
+  <h1>Notes</h1>
+  <ul>
+    <li *ngFor="let item of items">{{item.description}}</li>
+  </ul>
+</div>
+
+<!-- <div class="bottom">
+  <nav>
+    <a routerLink="/add" routerLinkActive="active" ariaCurrentWhenActive="page">Add</a>
+  </nav>
+  <button type="button" onclick="add()">Add</button>
+</div> -->
+<router-outlet></router-outlet>

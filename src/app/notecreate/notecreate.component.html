@@ -1,0 +1,12 @@
+<!-- <<button (click)="navigateToAbout()">Add</button> -->
+<p>note create </p>
+<!-- <<button (click)="navigateToAbout()">Add</button> -->
+<label> Add note</label>
+<input
+  #newItem
+  placeholder="add an item"
+  (keyup.enter)="addItem(newItem.value); newItem.value = ''"
+  class="lg-text-input"
+  id="addItemInput" />
+
+<button class="btn-primary" (click)="addItem(newItem.value)">Add</button>
